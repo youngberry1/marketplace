@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme-color" content="#FF6B6B">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Trending Boss Marketplace</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+
+<!-- Open Graph Meta Tags for Social Sharing -->
+<meta property="og:title" content="Trending Boss Marketplace">
+<meta property="og:description" content="Your ultimate marketplace for hot deals and cool finds! 🚀">
+<meta property="og:image" content="https://i.imgur.com/HBhby2y.jpeg">
+<meta property="og:url" content="https://trendingmarket.netlify.app">
+<meta property="og:type" content="website">
+
+<body>
+
+
+  <div class="container">
+    <div id="branding">
+      <h1 class="nickname">🔥 TRENDING BOSS 💼 </h1>
+      <p class="slogan">Your Ultimate Marketplace for Hot Deals & Cool Finds 🚀</p>
+    </div>
+    <input type="text" id="search" placeholder="Search products...">
+    <h1>🛍️ Product Showcase</h1>
+    <label for="category-select">Filter by Category:</label>
+    <select id="category-select">
+      <option value="all">All Products</option>
+      <option value="books">Books</option>
+      <option value="gadgets">Gadgets</option>
+      <option value="clothes">Clothes</option>
+    </select>
+
+    <div id="card-container" class="card-container"></div>
+
+    <p id="message"></p>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
