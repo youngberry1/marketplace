@@ -49,7 +49,7 @@ const products = [
     },
     {
         name: "Running Sneakers",
-        category: "clothes",
+        category: "sneakers",
         price: "$50",
         image: "https://m.media-amazon.com/images/I/61Ox4GXFVUL._AC_SL1009_.jpg"
     }
