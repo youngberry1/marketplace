@@ -88,11 +88,10 @@ select {
 .card img {
   width: 100%;
   height: 150px;
-  object-fit: contain; /* Shows full image, no crop */
+  object-fit: contain;
   border-radius: 8px;
   margin-bottom: 10px;
-  background-color: #fff; /* optional, fills empty space around image */
-}
+  background-color: #fff; 
 
 
 #search {
