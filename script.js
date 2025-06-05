@@ -58,9 +58,9 @@ const products = [
 
 
 
-let select = document.getElementById("category-select");
-let cardContainer = document.getElementById("card-container");
-let message = document.getElementById("message");
+const select = document.getElementById("category-select");
+const cardContainer = document.getElementById("card-container");
+const message = document.getElementById("message");
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -98,24 +98,37 @@ document.addEventListener("DOMContentLoaded", () => {
 
         try {
             if (selected === "all") {
-                renderCards(products)
+                renderCards(products);
             } else {
-                const filtered = products.filter(product => product.category === selected)
-                renderCards(filtered);
+                const filtered = products.filter(product => product.category === selected);
+
+                if (filtered.length === 0) {
+                    cardContainer.innerHTML = `<p style="color: red; font-weight: bold; padding: 1rem;">No products available in <em>${selected}</em> category.</p>`;
+                } else {
+                    renderCards(filtered);
+                }
             }
         } catch (error) {
-            message.textContent("Something went wrong!")
-            console.error(error)
+            message.textContent = "Something went wrong!";
+            console.error("Category filtering error:", error);
         }
-    })
+    });
+
+
+
     let search = document.getElementById("search");
 
     search.addEventListener("input", () => {
-        const searchTerm = search.value.toLowerCase();
+        const searchTerm = search.value.toLowerCase().trim();
         const filtered = products.filter(product =>
             product.name.toLowerCase().includes(searchTerm)
         );
-        renderCards(filtered);
+
+        if (filtered.length === 0) {
+            cardContainer.innerHTML = `<p style="color: red; font-weight: bold; padding: 1rem;">No products found for "<em>${searchTerm}</em>"</p>`;
+        } else {
+            renderCards(filtered);
+        }
     });
 })
 
