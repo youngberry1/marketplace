@@ -122,7 +122,7 @@ select:focus-visible {
    background-color: var(--color-card-img-bg);
 }
 
-#search {
+#search-input {
    width: 100%;
    padding: 12px 20px;
    font-size: 1rem;
@@ -137,12 +137,12 @@ select:focus-visible {
    margin-bottom: 20px;
 }
 
-#search::placeholder {
+#search-input::placeholder {
    color: var(--color-highlight) aa;
    font-style: italic;
 }
 
-#search:focus {
+#search-input:focus {
    background: rgba(212, 173, 252, 0.2);
    box-shadow: 0 0 12px var(--color-highlight), 0 0 20px var(--color-accent);
    color: var(--color-white);
