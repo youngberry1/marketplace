@@ -58,7 +58,7 @@ const products = [
 const select = document.getElementById("category-select");
 const cardContainer = document.getElementById("card-container");
 const message = document.getElementById("message");
-const search = document.getElementById("search-input"); // Assuming you have an input with id="search-input"
+const search = document.getElementById("search-input");
 
 const gibberishTexts = [
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
